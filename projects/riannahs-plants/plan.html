@@ -13,26 +13,137 @@
       <h1>riannah's plants</h1>
 
       <section>
-        <h2>Problem</h2>
+        <h2>Product goal</h2>
         <p>
-          Plant owners forget watering windows, miss repotting intervals, and have fragmented care information.
+          Build a secure, simple household plant management app for closed beta users.
+          Users can track their plants, watering schedule/history, and repotting schedule/history.
+          Architecture should stay minimal, dependency-light, and Cloudflare-native.
         </p>
       </section>
 
       <section>
-        <h2>v1 scope (draft)</h2>
+        <h2>v1 scope (committed)</h2>
         <ul>
-          <li>Add and manage household plants</li>
-          <li>Track watering schedule + history</li>
-          <li>Track repotting schedule + history</li>
-          <li>Plant profile page with basic care information</li>
-          <li>Simple reminder view for upcoming tasks</li>
+          <li>Closed-beta authentication (no public sign-up)</li>
+          <li>Role-based access: <strong>admin</strong> and <strong>user</strong></li>
+          <li>Admin can create users (admin/user roles)</li>
+          <li>User can add/edit/archive their plants</li>
+          <li>User can set watering schedule and log watering events</li>
+          <li>User can see what needs watering now/upcoming</li>
+          <li>User can set repotting schedule and log repotting events</li>
+          <li>Plant profile captures enough metadata for future care guidance enrichment</li>
+          <li>Separate dev deployment for safe testing before production</li>
         </ul>
       </section>
 
       <section>
-        <h2>Next</h2>
-        <p>This planning doc will be expanded into milestones, architecture, and delivery phases.</p>
+        <h2>Out of scope (v1)</h2>
+        <ul>
+          <li>Public registration</li>
+          <li>Advanced automated plant care recommendations</li>
+          <li>Push/email reminders</li>
+          <li>Multi-tenant organizations/teams</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Proposed architecture (simple + secure)</h2>
+        <ul>
+          <li><strong>Frontend:</strong> React + Vite (minimal dependency policy)</li>
+          <li><strong>Hosting:</strong> Cloudflare Pages</li>
+          <li><strong>Backend API:</strong> Cloudflare Workers</li>
+          <li><strong>Data:</strong> Cloudflare D1 (SQL, simple relational model)</li>
+          <li><strong>Auth:</strong> HttpOnly session cookies issued by Worker</li>
+          <li><strong>Environments:</strong> separate <code>dev</code> and <code>prod</code> deployments + isolated data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Initial data model</h2>
+        <ul>
+          <li><strong>users</strong>: id, email, password_hash, role, status, created_at</li>
+          <li><strong>plants</strong>: id, owner_user_id, nickname, species_common, species_scientific, acquired_on, notes, created_at</li>
+          <li><strong>watering_schedules</strong>: plant_id, cadence_days, next_due_on, updated_at</li>
+          <li><strong>watering_events</strong>: id, plant_id, occurred_on, notes</li>
+          <li><strong>repotting_schedules</strong>: plant_id, cadence_days, next_due_on, updated_at</li>
+          <li><strong>repotting_events</strong>: id, plant_id, occurred_on, notes</li>
+        </ul>
+        <p class="muted">
+          Species fields are included now so we can attach care guidance datasets later without schema churn.
+        </p>
+      </section>
+
+      <section>
+        <h2>Security baseline</h2>
+        <ul>
+          <li>Argon2id (or bcrypt if platform constraints) for password hashing</li>
+          <li>HttpOnly + Secure + SameSite session cookies</li>
+          <li>Server-side role enforcement on every admin route</li>
+          <li>Row ownership checks: users can only access their own plants/events</li>
+          <li>Input validation at API boundary</li>
+          <li>Audit trail for admin user creation actions</li>
+          <li>No secrets in repo; all secrets via Cloudflare/GitHub env secrets</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Delivery phases</h2>
+        <h3>Phase 0: foundation</h3>
+        <ul>
+          <li>Create <code>riannahs-plants</code> repo and baseline CI</li>
+          <li>Set up Cloudflare dev + prod deployments and env vars</li>
+          <li>Create ADR directory and seed architecture decisions</li>
+        </ul>
+
+        <h3>Phase 1: auth + RBAC</h3>
+        <ul>
+          <li>User login/logout</li>
+          <li>Admin-only user creation flow</li>
+          <li>Role-protected API routes</li>
+        </ul>
+
+        <h3>Phase 2: plants + schedules</h3>
+        <ul>
+          <li>CRUD plants</li>
+          <li>Set watering/repotting schedules</li>
+          <li>Dashboard view: due and upcoming tasks</li>
+        </ul>
+
+        <h3>Phase 3: event tracking + polish</h3>
+        <ul>
+          <li>Log watering and repotting events</li>
+          <li>History views per plant</li>
+          <li>Basic UX polish + v1 hardening</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Dev deployment strategy (early)</h2>
+        <ul>
+          <li><strong>Production:</strong> deploy from <code>main</code></li>
+          <li><strong>Development:</strong> deploy from <code>dev</code> branch</li>
+          <li>Separate D1 database for dev vs prod</li>
+          <li>Separate session secrets per environment</li>
+          <li>PRs validated against dev before merge to main</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ADRs</h2>
+        <ul>
+          <li><a href="/projects/riannahs-plants/adrs/ADR-0001-cloudflare-native-stack.md">ADR-0001: Cloudflare-native stack</a></li>
+          <li><a href="/projects/riannahs-plants/adrs/ADR-0002-react-ui.md">ADR-0002: React for UI complexity management</a></li>
+          <li><a href="/projects/riannahs-plants/adrs/ADR-0003-closed-beta-rbac.md">ADR-0003: Closed beta + RBAC user management</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Open questions</h2>
+        <ul>
+          <li>Preferred login identifier: email only (recommended) or username support?</li>
+          <li>Any required password policy beyond minimum length + complexity?</li>
+          <li>Do admins need ability to reset user passwords in v1?</li>
+        </ul>
       </section>
     </main>
   </body>
