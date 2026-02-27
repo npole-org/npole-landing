@@ -18,7 +18,14 @@
           <li>Set up production and develop Cloudflare Pages environments.</li>
           <li>Bootstrapped repo workflows and branch protections.</li>
           <li>Implemented testing foundation (web + api unit/integration + e2e harness).</li>
-          <li>Added auth/data foundation work (password/session/schema primitives).</li>
+          <li>Added closed-beta auth: login/logout session cookies + server-side RBAC.</li>
+          <li>Shipped admin user provisioning endpoint (admin-only create user flow).</li>
+          <li>Added admin dashboard UI to create users via <code>POST /admin/users</code> with success/error coverage in web tests.</li>
+          <li>Shipped authenticated plant CRUD foundation (`GET/POST /plants`).</li>
+          <li>Shipped watering/repotting event tracking foundation (`POST /plants/:id/events`) with due-task endpoint (`GET /tasks/due`).</li>
+          <li>Integrated dashboard due/upcoming counters and due-task list in web UI.</li>
+          <li>Completed full plant management lifecycle (add/edit/delete) in API + web UI.</li>
+          <li>Added schedule configuration (`PUT /plants/:id/schedule`) and per-plant event history (`GET /plants/:id/events`) with corresponding UI flows.</li>
           <li>Added links to repo and environment URLs on project pages.</li>
         </ul>
       </section>

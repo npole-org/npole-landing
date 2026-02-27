@@ -62,11 +62,8 @@
         <h2>Initial data model</h2>
         <ul>
           <li><strong>users</strong>: id, email, password_hash, role, status, created_at</li>
-          <li><strong>plants</strong>: id, owner_user_id, nickname, species_common, species_scientific, acquired_on, notes, created_at</li>
-          <li><strong>watering_schedules</strong>: plant_id, cadence_days, next_due_on, updated_at</li>
-          <li><strong>watering_events</strong>: id, plant_id, occurred_on, notes</li>
-          <li><strong>repotting_schedules</strong>: plant_id, cadence_days, next_due_on, updated_at</li>
-          <li><strong>repotting_events</strong>: id, plant_id, occurred_on, notes</li>
+          <li><strong>plants</strong>: id, owner_user_id, nickname, species_common, species_scientific, acquired_on, notes, next_water_on, next_repot_on, created_at</li>
+          <li><strong>plant_events</strong>: id, plant_id, owner_user_id, type (water|repot), occurred_on, next_due_on, created_at</li>
         </ul>
         <p class="muted">
           Species fields are included now so we can attach care guidance datasets later without schema churn.
@@ -132,7 +129,7 @@
         <h2>Dev deployment strategy (early)</h2>
         <ul>
           <li><strong>Production:</strong> deploy from <code>main</code></li>
-          <li><strong>Development:</strong> deploy from <code>dev</code> branch</li>
+          <li><strong>Development:</strong> deploy from <code>develop</code> branch</li>
           <li>Separate D1 database for dev vs prod</li>
           <li>Separate session secrets per environment</li>
           <li>PRs validated against dev before merge to main</li>
