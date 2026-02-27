@@ -16,12 +16,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Ensure Pages project exists + deploy
+      - name: Ensure Pages project exists
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          API="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects"
+          EXISTS=$(curl -fsSL "$API" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/json" | jq -r '.result[]?.name' | grep -x 'npole-landing' || true)
+
+          if [ -z "$EXISTS" ]; then
+            curl -fsSL -X POST "$API" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              --data '{"name":"npole-landing","production_branch":"main"}' >/dev/null
+            echo "Created Pages project: npole-landing"
+          else
+            echo "Pages project already exists: npole-landing"
+          fi
+
+      - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: |
-            pages project create npole-landing --production-branch=main || true
-            pages deploy . --project-name=npole-landing --branch=main --commit-dirty=true
+          command: pages deploy . --project-name=npole-landing --branch=main --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
