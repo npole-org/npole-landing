@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate required files
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f README.md
+      - name: Basic HTML sanity check
+        run: |
+          grep -qi "<!doctype html>" index.html
+          grep -qi "<title>" index.html
