@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "riannahs-plants",
+    "name": "riannah's plants",
+    "status": "planning",
+    "updated": "2026-02-27",
+    "summary": "A household plant companion app to track watering and repotting schedules and provide plant care information.",
+    "links": {
+      "overview": "/projects/riannahs-plants/",
+      "plan": "/projects/riannahs-plants/plan.html",
+      "changelog": "/projects/riannahs-plants/changelog.html",
+      "repo": "https://github.com/npole-org"
+    }
+  }
+]

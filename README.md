@@ -29,3 +29,17 @@ Then visit `http://localhost:8080`.
 ## License
 
 MIT
+
+
+## Project visibility model
+
+The landing page reads `data/projects.json` and renders an **Ongoing projects** section.
+
+For each project, provide:
+- status
+- high-level summary
+- link to overview
+- link to planning document
+- link to changelog
+
+Current project docs live in `projects/riannahs-plants/`.

@@ -89,3 +89,74 @@ ul { padding-left: 1.1rem; color: var(--muted); }
   margin-top: 3rem;
   padding: 1rem 0 2rem;
 }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.45);
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.project-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.status-planning {
+  color: #93c5fd;
+  border-color: #1d4ed8;
+}
+
+.status-in-progress {
+  color: #86efac;
+  border-color: #15803d;
+}
+
+.status-blocked {
+  color: #fca5a5;
+  border-color: #b91c1c;
+}
+
+.status-done {
+  color: #a7f3d0;
+  border-color: #047857;
+}
+
+.status-unknown {
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.project-page {
+  padding: 2rem 0 3rem;
+}
