@@ -4,7 +4,7 @@
     "name": "riannah's plants",
     "status": "in-progress",
     "updated": "2026-02-27",
-    "summary": "Closed-beta plant manager with auth/RBAC, watering + repotting tracking, and Cloudflare-native deployment/testing.",
+    "summary": "Closed-beta plant manager with auth/RBAC, admin user provisioning API+dashboard UI, plant CRUD, and watering/repotting due-task tracking on Cloudflare.",
     "links": {
       "overview": "/projects/riannahs-plants/",
       "plan": "/projects/riannahs-plants/plan.html",
