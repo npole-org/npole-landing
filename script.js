@@ -39,6 +39,9 @@
           <p class="project-links">
             <a href="${project.links.plan}">Plan</a>
             <a href="${project.links.changelog}">Changelog</a>
+            <a href="${project.links.repo}" target="_blank" rel="noreferrer">Repo</a>
+            <a href="${project.links.dev}" target="_blank" rel="noreferrer">Dev Site</a>
+            <a href="${project.links.prod}" target="_blank" rel="noreferrer">Prod Site</a>
           </p>
         `;
 

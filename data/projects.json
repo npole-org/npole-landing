@@ -2,14 +2,16 @@
   {
     "slug": "riannahs-plants",
     "name": "riannah's plants",
-    "status": "planning",
+    "status": "in-progress",
     "updated": "2026-02-27",
-    "summary": "Closed-beta plant management app for watering and repotting schedules, activity tracking, and future plant-care guidance.",
+    "summary": "Closed-beta plant manager with auth/RBAC, watering + repotting tracking, and Cloudflare-native deployment/testing.",
     "links": {
       "overview": "/projects/riannahs-plants/",
       "plan": "/projects/riannahs-plants/plan.html",
       "changelog": "/projects/riannahs-plants/changelog.html",
-      "repo": "https://github.com/npole-org"
+      "repo": "https://github.com/npole-org/riannahs-plants",
+      "prod": "https://riannahs-plants.pages.dev",
+      "dev": "https://riannahs-plants-develop.pages.dev"
     }
   }
 ]
