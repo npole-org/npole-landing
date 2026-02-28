@@ -79,6 +79,7 @@
           <li><strong>Session teardown compatibility hardening shipped:</strong> auth cookie clear flow now appends explicit expiry fallback (<code>Expires=Thu, 01 Jan 1970 00:00:00 GMT</code>) alongside <code>Max-Age=0</code> for <code>__Host-rp_session</code>, verified on <code>develop</code> deploy run <code>22516388784</code> and promoted via reconciled PR #130.</li>
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>speaker-selection</code> (<code>speaker-selection=()</code>), verified on <code>develop</code> deploy run <code>22516453476</code> and promoted via reconciled PR #133.</li>
           <li><strong>CSRF defense-in-depth hardening shipped:</strong> API now blocks unsafe cross-site state-changing requests using fetch-metadata/origin checks (<code>POST/PUT/PATCH/DELETE</code> → <code>403 forbidden</code>), verified on <code>develop</code> deploy run <code>22516575203</code> and promoted via reconciled PR #137.</li>
+          <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>web-share</code> (<code>web-share=()</code>), verified on <code>develop</code> deploy run <code>22516690741</code> and promoted via reconciled PR #140 after retrying one transient Cloudflare Pages 503 deployment failure.</li>
         </ul>
       </section>
 
