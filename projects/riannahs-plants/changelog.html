@@ -60,6 +60,8 @@
           <li>Promoted Content-Language hardening to <code>main</code> via reconciled release PR #91 after closing stale direct promotion PR #88.</li>
           <li>Tightened API <code>Permissions-Policy</code> surface by explicitly disabling additional browser capabilities and validated the change with unit coverage.</li>
           <li>Promoted permissions-policy tightening to <code>main</code> via reconciled release PR #95 after direct promotion PR #94 was non-mergeable.</li>
+          <li>Shipped CORS cache-key hardening by expanding API <code>Vary</code> to include <code>Origin</code>, <code>Access-Control-Request-Method</code>, and <code>Access-Control-Request-Headers</code>; verified via develop deploy run <code>22515394690</code>.</li>
+          <li>Promoted CORS <code>Vary</code> hardening to <code>main</code> via reconciled release PR #98 after direct promotion PR #97 hit non-clean rebase conflicts.</li>
         </ul>
       </section>
 
