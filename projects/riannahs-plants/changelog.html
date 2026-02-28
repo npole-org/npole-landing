@@ -78,6 +78,7 @@
           <li>Hardened logout/session teardown compatibility by appending explicit cookie-expiry fallback (<code>Expires=Thu, 01 Jan 1970 00:00:00 GMT</code>) to <code>__Host-rp_session</code> clear responses; verified on <code>develop</code> deploy run <code>22516388784</code> and promoted via reconciled release PR #130 after direct promotion PR #129 was non-clean.</li>
           <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>speaker-selection=()</code> disablement; verified on <code>develop</code> deploy run <code>22516453476</code> and promoted via reconciled release PR #133 after direct promotion PR #132 was non-mergeable.</li>
           <li>Added fetch-metadata/origin CSRF defense-in-depth guard that blocks unsafe cross-site state-changing requests (<code>POST/PUT/PATCH/DELETE</code>) with <code>403 forbidden</code>; verified on <code>develop</code> deploy run <code>22516575203</code> and promoted via reconciled release PR #137.</li>
+          <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>web-share=()</code> disablement; verified on <code>develop</code> deploy run <code>22516690741</code> and promoted via reconciled release PR #140 after one transient Cloudflare Pages 503 rerun.</li>
         </ul>
       </section>
 
