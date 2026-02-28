@@ -42,6 +42,10 @@
           <li>Promoted X-Download-Options hardening to <code>main</code> via reconciled release PR #66 after direct promotion conflict in PR #65.</li>
           <li>Shipped API embedder isolation hardening with <code>Cross-Origin-Embedder-Policy: require-corp</code> and cleaned duplicated CORP assertion in unit coverage.</li>
           <li>Promoted COEP hardening to <code>main</code> via reconciled release PR #72 after direct promotion conflict in PR #73.</li>
+          <li>Shipped auth logout hardening with <code>Clear-Site-Data: "cache", "cookies", "storage"</code> response header on logout endpoint and added unit assertions.</li>
+          <li>Promoted logout clear-site-data hardening to <code>main</code> via direct promotion PR #75 after successful <code>develop</code> deploy verification (run <code>22513979346</code>).</li>
+          <li>Shipped logout-state hardening by adding <code>Clear-Site-Data: "cache", "cookies", "storage"</code> on <code>/auth/logout</code> with unit coverage and successful <code>develop</code> deploy verification.</li>
+          <li>Promoted logout clear-site-data hardening to <code>main</code> via release PR #75 after required checks passed.</li>
         </ul>
       </section>
 
