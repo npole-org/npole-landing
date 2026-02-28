@@ -63,6 +63,7 @@
           <li><strong>Legacy browser XSS policy hardening shipped:</strong> API responses now include <code>X-XSS-Protection: 0</code>; increment verified on <code>develop</code> and promoted via reconciled PR #83.</li>
           <li><strong>Legacy CSP compatibility hardening shipped:</strong> API responses now mirror CSP into <code>X-Content-Security-Policy</code>; increment verified on <code>develop</code> and promoted via reconciled PR #87.</li>
           <li><strong>Edge cache hardening shipped:</strong> API responses now include <code>Surrogate-Control: no-store</code> to reduce intermediary CDN cache retention risk; increment verified on <code>develop</code> and promoted via reconciled PR #89.</li>
+          <li><strong>Response language hardening shipped:</strong> API responses now include explicit <code>Content-Language: en</code>; increment verified on <code>develop</code> deploy run <code>22515193948</code> and promoted via reconciled PR #91.</li>
         </ul>
       </section>
 
