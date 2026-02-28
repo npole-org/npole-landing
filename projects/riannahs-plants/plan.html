@@ -74,6 +74,7 @@
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>local-fonts</code> (<code>local-fonts=()</code>), verified on <code>develop</code> deploy run <code>22515969754</code> and promoted via reconciled PR #119.</li>
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>screen-wake-lock</code> (<code>screen-wake-lock=()</code>), verified on <code>develop</code> deploy run <code>22516083909</code> and promoted via reconciled PR #121.</li>
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>screen-wake-lock</code> and <code>idle-detection</code> (<code>screen-wake-lock=()</code>, <code>idle-detection=()</code>), verified on <code>develop</code> deploy run <code>22516083909</code> and promoted via reconciled PR #121.</li>
+          <li><strong>Session-cookie CSRF hardening shipped:</strong> auth cookie issue/clear flows now enforce <code>SameSite=Strict</code> for <code>__Host-rp_session</code>, verified on <code>develop</code> deploy run <code>22516248836</code> and promoted via reconciled PR #124 after direct promotion PR #123 was non-clean.</li>
         </ul>
       </section>
 

@@ -73,6 +73,7 @@
           <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>local-fonts=()</code> disablement; verified on <code>develop</code> deploy run <code>22515969754</code> and promoted via reconciled release PR #119 after direct promotion PR #118 was non-mergeable.</li>
           <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>screen-wake-lock=()</code> disablement; verified on <code>develop</code> deploy run <code>22516083909</code> and promoted via reconciled release PR #121.</li>
           <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>screen-wake-lock=()</code> and <code>idle-detection=()</code> disablement; verified on <code>develop</code> deploy run <code>22516083909</code> and promoted via reconciled release PR #121 after direct promotion PR #118 remained conflicting.</li>
+          <li>Hardened auth session cookies by moving both set/clear flows to <code>SameSite=Strict</code> for <code>__Host-rp_session</code>; verified on <code>develop</code> deploy run <code>22516248836</code> and promoted via reconciled release PR #124 after direct promotion PR #123 was non-clean.</li>
         </ul>
       </section>
 
