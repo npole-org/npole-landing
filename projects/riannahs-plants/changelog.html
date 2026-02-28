@@ -70,6 +70,7 @@
           <li>Promoted permissions-policy clipboard/device hardening to <code>main</code> via reconciled release PR #111 after direct promotion PR #110 was non-mergeable.</li>
           <li>Further tightened API <code>Permissions-Policy</code> by explicitly disabling <code>window-management</code>; verified on <code>develop</code> deploy run <code>22515757417</code> and promoted via reconciled release PR #113.</li>
           <li>Shipped cache-key correctness hardening by merging response <code>Vary</code> directives (CORS + auth) and adding baseline <code>Vary: Cookie, Authorization</code>; verified on <code>develop</code> deploy run <code>22515925667</code> and promoted via reconciled release PR #117 after direct promotion PR #116 was non-mergeable.</li>
+          <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>local-fonts=()</code> disablement; verified on <code>develop</code> deploy run <code>22515969754</code> and promoted via reconciled release PR #119 after direct promotion PR #118 was non-mergeable.</li>
         </ul>
       </section>
 
