@@ -81,6 +81,7 @@
           <li><strong>CSRF defense-in-depth hardening shipped:</strong> API now blocks unsafe cross-site state-changing requests using fetch-metadata/origin checks (<code>POST/PUT/PATCH/DELETE</code> → <code>403 forbidden</code>), verified on <code>develop</code> deploy run <code>22516575203</code> and promoted via reconciled PR #137.</li>
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>web-share</code> (<code>web-share=()</code>), verified on <code>develop</code> deploy run <code>22516690741</code> and promoted via reconciled PR #140 after retrying one transient Cloudflare Pages 503 deployment failure.</li>
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>picture-in-picture</code> (<code>picture-in-picture=()</code>), verified on <code>develop</code> deploy run <code>22516859718</code> and promoted via reconciled PR #143 after direct promotion PR #142 was non-clean.</li>
+          <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>keyboard-map</code> (<code>keyboard-map=()</code>) with unit assertion coverage, verified on <code>develop</code> deploy run <code>22517006015</code> and promoted via reconciled PR #146 after direct promotion PR #145 was non-clean.</li>
         </ul>
       </section>
 
