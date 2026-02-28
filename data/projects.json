@@ -4,7 +4,7 @@
     "name": "riannah's plants",
     "status": "live",
     "updated": "2026-02-28",
-    "summary": "V1 is live on Cloudflare with closed-beta auth/RBAC, admin user provisioning, plant CRUD, watering+repot schedules/events, and post-v1 auth input hardening promoted across develop/main.",
+    "summary": "V1 is live on Cloudflare with closed-beta auth/RBAC, admin user provisioning, plant CRUD, watering+repot schedules/events, plus post-v1 security hardening (auth validation + API response security headers) shipping continuously on develop.",
     "links": {
       "overview": "/projects/riannahs-plants/",
       "plan": "/projects/riannahs-plants/plan.html",
