@@ -50,7 +50,8 @@
           <li><strong>Cookie security hardening shipped:</strong> session cookie now uses <code>__Host-</code> prefix semantics in production release flow.</li>
           <li><strong>Cache hardening shipped:</strong> API responses now include no-store cache-control headers to reduce sensitive payload persistence in clients/proxies.</li>
           <li><strong>Release continuity maintained:</strong> latest hardening increment passed <code>develop</code> deploy verification and was promoted to <code>main</code> via PR #43.</li>
-          <li><strong>Transport security hardening shipped:</strong> API responses now include <code>Strict-Transport-Security</code>; increment verified on <code>develop</code> and promoted via reconciled PR #48.</li>
+          <li><strong>Transport security hardening shipped:</strong> API responses now include <code>Strict-Transport-Security</code>; increment verified on <code>develop</code> and promoted via reconciled PR #51.</li>
+          <li><strong>Policy hardening expanded:</strong> API responses now include <code>X-Permitted-Cross-Domain-Policies: none</code>; increment verified on <code>develop</code> and promoted via reconciled PR #53.</li>
         </ul>
       </section>
 
