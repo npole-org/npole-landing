@@ -69,6 +69,7 @@
           <li><strong>Privacy-surface hardening expanded:</strong> API <code>Permissions-Policy</code> now explicitly disables <code>browsing-topics</code> (<code>browsing-topics=()</code>), verified on <code>develop</code> deploy run <code>22515461579</code> and promoted via reconciled PR #101.</li>
           <li><strong>CSP compatibility hardening expanded:</strong> API CSP now enforces <code>form-action 'none'</code> and mirrors legacy CSP policy via <code>X-WebKit-CSP</code>; verified on <code>develop</code> deploy run <code>22515527654</code> and promoted via reconciled PR #105.</li>
           <li><strong>Release continuity maintained:</strong> subsequent CSP form-action release sync also passed <code>develop</code> deploy verification (run <code>22515586499</code>) and was promoted via reconciled PR #107.</li>
+          <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables clipboard, hardware-device, and passkey surface directives (<code>clipboard-read</code>/<code>clipboard-write</code>/<code>hid</code>/<code>serial</code>/<code>publickey-credentials-get</code>), verified on <code>develop</code> deploy run <code>22515692292</code> and promoted via reconciled PR #111.</li>
         </ul>
       </section>
 
