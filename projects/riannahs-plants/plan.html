@@ -71,6 +71,7 @@
           <li><strong>Release continuity maintained:</strong> subsequent CSP form-action release sync also passed <code>develop</code> deploy verification (run <code>22515586499</code>) and was promoted via reconciled PR #107.</li>
           <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables clipboard, hardware-device, passkey, and window-management surface directives (<code>clipboard-read</code>/<code>clipboard-write</code>/<code>hid</code>/<code>serial</code>/<code>publickey-credentials-get</code>/<code>window-management</code>), verified on <code>develop</code> deploy run <code>22515757417</code> and promoted via reconciled PR #113.</li>
           <li><strong>Cache-key hardening expanded:</strong> API now merges all response <code>Vary</code> directives and includes auth isolation directives (<code>Cookie</code>, <code>Authorization</code>) alongside CORS controls, verified on <code>develop</code> deploy run <code>22515925667</code> and promoted via reconciled PR #117.</li>
+          <li><strong>Permissions-policy hardening expanded:</strong> API now explicitly disables <code>local-fonts</code> (<code>local-fonts=()</code>), verified on <code>develop</code> deploy run <code>22515969754</code> and promoted via reconciled PR #119.</li>
         </ul>
       </section>
 
