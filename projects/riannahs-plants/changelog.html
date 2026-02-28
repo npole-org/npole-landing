@@ -26,6 +26,7 @@
           <li>Shipped persistent login bootstrap via <code>/auth/me</code> so authenticated sessions survive page reloads.</li>
           <li>Resolved release-branch divergence and completed conflict-reconciled promotion of latest <code>develop</code> hardening delta to <code>main</code>.</li>
           <li>Hardened auth session cookies by migrating to <code>__Host-rp_session</code> naming and promoted via reconciled <code>main</code> release PR flow.</li>
+          <li>Added API no-store cache hardening headers (<code>Cache-Control</code>, <code>Pragma</code>, <code>Expires</code>) with unit coverage and promoted through reconciled release flow.</li>
         </ul>
       </section>
 
