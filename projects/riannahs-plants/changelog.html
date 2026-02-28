@@ -77,6 +77,7 @@
           <li>Tightened transport hardening by upgrading HSTS to preload-ready policy (<code>max-age=63072000; includeSubDomains; preload</code>); verified on <code>develop</code> deploy run <code>22516352084</code> and promoted via reconciled release PR #128.</li>
           <li>Hardened logout/session teardown compatibility by appending explicit cookie-expiry fallback (<code>Expires=Thu, 01 Jan 1970 00:00:00 GMT</code>) to <code>__Host-rp_session</code> clear responses; verified on <code>develop</code> deploy run <code>22516388784</code> and promoted via reconciled release PR #130 after direct promotion PR #129 was non-clean.</li>
           <li>Expanded API <code>Permissions-Policy</code> hardening with explicit <code>speaker-selection=()</code> disablement; verified on <code>develop</code> deploy run <code>22516453476</code> and promoted via reconciled release PR #133 after direct promotion PR #132 was non-mergeable.</li>
+          <li>Added fetch-metadata/origin CSRF defense-in-depth guard that blocks unsafe cross-site state-changing requests (<code>POST/PUT/PATCH/DELETE</code>) with <code>403 forbidden</code>; verified on <code>develop</code> deploy run <code>22516575203</code> and promoted via reconciled release PR #137.</li>
         </ul>
       </section>
 
