@@ -20,6 +20,8 @@
           <li>Re-ran <code>deploy-pages</code> on <code>develop</code>; confirmed API deploy, Pages deploy, and deployed-login-smoke jobs all passed.</li>
           <li>Ran additional local Playwright deployed login smoke validation against <code>riannahs-plants-develop.pages.dev</code>.</li>
           <li>Promoted <code>develop</code> to <code>main</code> (release baseline) after successful deployment verification.</li>
+          <li>Shipped post-v1 auth hardening: input email-format validation + password length caps with added unit coverage.</li>
+          <li>Promoted hardening increment through <code>develop</code> deploy gate and into <code>main</code> release flow.</li>
         </ul>
       </section>
 
