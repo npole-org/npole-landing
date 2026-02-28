@@ -28,6 +28,8 @@
           <li>Hardened auth session cookies by migrating to <code>__Host-rp_session</code> naming and promoted via reconciled <code>main</code> release PR flow.</li>
           <li>Added API no-store cache hardening headers (<code>Cache-Control</code>, <code>Pragma</code>, <code>Expires</code>) with unit coverage and promoted after successful <code>develop</code> deploy verification.</li>
           <li>Promoted latest <code>develop</code> delta to <code>main</code> via release PR #43 once required checks passed.</li>
+          <li>Shipped API transport hardening by adding <code>Strict-Transport-Security</code> response header with unit coverage and successful <code>develop</code> deploy verification.</li>
+          <li>Promoted HSTS hardening to <code>main</code> via reconciled release PR #48 after direct promotion conflict in PR #47.</li>
         </ul>
       </section>
 
