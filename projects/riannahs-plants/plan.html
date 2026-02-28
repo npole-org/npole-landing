@@ -57,6 +57,7 @@
           <li><strong>Process isolation hardening shipped:</strong> API responses now include <code>Origin-Agent-Cluster: ?1</code>; increment verified on <code>develop</code> and promoted via reconciled PR #64.</li>
           <li><strong>Legacy browser download hardening shipped:</strong> API responses now include <code>X-Download-Options: noopen</code>; increment verified on <code>develop</code> and promoted via reconciled PR #66.</li>
           <li><strong>Embedder isolation hardening shipped:</strong> API responses now include <code>Cross-Origin-Embedder-Policy: require-corp</code>; increment verified on <code>develop</code> and promoted via reconciled PR #72.</li>
+          <li><strong>Logout-state hardening shipped:</strong> <code>/auth/logout</code> now returns <code>Clear-Site-Data: "cache", "cookies", "storage"</code> to reduce residual browser state after sign-out; increment verified on <code>develop</code> and promoted via PR #75.</li>
         </ul>
       </section>
 
