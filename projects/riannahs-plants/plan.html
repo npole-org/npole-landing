@@ -47,6 +47,7 @@
           <li><strong>Security baseline expanded:</strong> API responses now emit consistent security headers, validated in unit tests and develop deploy smoke gate.</li>
           <li><strong>Session UX hardening shipped:</strong> authenticated sessions now restore on reload using <code>/auth/me</code> bootstrap in the web app.</li>
           <li><strong>Release resilience validated:</strong> promotion branch divergence was reconciled and latest hardening batch is now live on <code>main</code>.</li>
+          <li><strong>Cookie security hardening shipped:</strong> session cookie now uses <code>__Host-</code> prefix semantics in production release flow.</li>
         </ul>
       </section>
 
