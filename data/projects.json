@@ -4,7 +4,7 @@
     "name": "riannah's garden",
     "status": "live",
     "updated": "2026-02-28",
-    "summary": "V1 is live on Cloudflare with closed-beta auth/RBAC, admin user provisioning, plant CRUD, watering+repot schedules/events, and post-v1 hardening now in main (auth validation, persistent login bootstrap, API security + HSTS + cross-domain + DNS-prefetch-control + COOP + Origin-Agent-Cluster headers, __Host- session cookie hardening, and API no-store cache-control headers promoted via verified develop deploy + reconciled release flow).", 
+    "summary": "V1 is live on Cloudflare with closed-beta auth/RBAC, admin user provisioning, plant CRUD, watering+repot schedules/events, and post-v1 hardening now in main (auth validation, persistent login bootstrap, API security + HSTS + cross-domain + DNS-prefetch-control + COOP + Origin-Agent-Cluster + X-Download-Options headers, __Host- session cookie hardening, and API no-store cache-control headers promoted via verified develop deploy + reconciled release flow).", 
     "links": {
       "overview": "/projects/riannahs-plants/",
       "plan": "/projects/riannahs-plants/plan.html",
