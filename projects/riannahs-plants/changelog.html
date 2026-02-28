@@ -23,6 +23,8 @@
           <li>Shipped post-v1 auth hardening: input email-format validation + password length caps with added unit coverage.</li>
           <li>Promoted hardening increment through <code>develop</code> deploy gate and into <code>main</code> release flow.</li>
           <li>Shipped baseline API security headers (nosniff, frame deny, referrer policy, permissions policy, API CSP) with unit coverage and successful develop deploy verification.</li>
+          <li>Shipped persistent login bootstrap via <code>/auth/me</code> so authenticated sessions survive page reloads.</li>
+          <li>Resolved release-branch divergence and completed conflict-reconciled promotion of latest <code>develop</code> hardening delta to <code>main</code>.</li>
         </ul>
       </section>
 
