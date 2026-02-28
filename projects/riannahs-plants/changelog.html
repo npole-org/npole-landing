@@ -46,6 +46,8 @@
           <li>Promoted logout clear-site-data hardening to <code>main</code> via direct promotion PR #75 after successful <code>develop</code> deploy verification (run <code>22513979346</code>).</li>
           <li>Shipped logout-state hardening by adding <code>Clear-Site-Data: "cache", "cookies", "storage"</code> on <code>/auth/logout</code> with unit coverage and successful <code>develop</code> deploy verification.</li>
           <li>Promoted logout clear-site-data hardening to <code>main</code> via release PR #75 after required checks passed.</li>
+          <li>Shipped API crawler-indexing hardening with <code>X-Robots-Tag: noindex, nofollow</code> and unit coverage, verified on <code>develop</code> deploy (run <code>22514054147</code>).</li>
+          <li>Promoted robots-tag hardening to <code>main</code> via reconciled release PR #78 after direct promotion PR #77 was non-mergeable.</li>
         </ul>
       </section>
 
