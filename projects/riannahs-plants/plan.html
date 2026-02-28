@@ -60,6 +60,7 @@
           <li><strong>Logout-state hardening shipped:</strong> <code>/auth/logout</code> now returns <code>Clear-Site-Data: "cache", "cookies", "storage"</code> to reduce residual browser state after sign-out; increment verified on <code>develop</code> and promoted via PR #75.</li>
           <li><strong>Crawler-indexing hardening shipped:</strong> API responses now include <code>X-Robots-Tag: noindex, nofollow</code>; increment verified on <code>develop</code> and promoted via reconciled PR #78.</li>
           <li><strong>Session cookie scheduling hardening shipped:</strong> auth cookie issue/clear flows now include <code>Priority=High</code> on <code>__Host-rp_session</code>; increment verified on <code>develop</code> and promoted via PR #81.</li>
+          <li><strong>Legacy browser XSS policy hardening shipped:</strong> API responses now include <code>X-XSS-Protection: 0</code>; increment verified on <code>develop</code> and promoted via reconciled PR #83.</li>
         </ul>
       </section>
 

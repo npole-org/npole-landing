@@ -50,6 +50,8 @@
           <li>Promoted robots-tag hardening to <code>main</code> via reconciled release PR #78 after direct promotion PR #77 was non-mergeable.</li>
           <li>Shipped auth session-cookie scheduling hardening by adding <code>Priority=High</code> to both issue and clear cookie flows for <code>__Host-rp_session</code> with updated unit coverage.</li>
           <li>Promoted session-cookie priority hardening to <code>main</code> via release PR #81 after successful <code>develop</code> deploy verification (run <code>22514167104</code>).</li>
+          <li>Shipped legacy-XSS hardening with <code>X-XSS-Protection: 0</code> on API responses and unit coverage; verified on <code>develop</code> deploy (run <code>22514214408</code>).</li>
+          <li>Promoted X-XSS-Protection hardening to <code>main</code> via reconciled release PR #83 after direct promotion PR #82 was non-clean.</li>
         </ul>
       </section>
 
