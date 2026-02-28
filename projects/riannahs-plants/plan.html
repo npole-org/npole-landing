@@ -66,6 +66,7 @@
           <li><strong>Response language hardening shipped:</strong> API responses now include explicit <code>Content-Language: en</code>; increment verified on <code>develop</code> deploy run <code>22515193948</code> and promoted via reconciled PR #91.</li>
           <li><strong>Feature-surface policy hardening shipped:</strong> API <code>Permissions-Policy</code> now explicitly disables additional browser capabilities (for example <code>payment</code>, <code>fullscreen</code>, and related sensors/media features); increment verified on <code>develop</code> deploy run <code>22515285659</code> and promoted via reconciled PR #95.</li>
           <li><strong>CORS cache-key hardening shipped:</strong> API CORS responses now emit expanded <code>Vary</code> controls (<code>Origin</code>, <code>Access-Control-Request-Method</code>, <code>Access-Control-Request-Headers</code>) to reduce intermediary cache-mixing risk; increment verified on <code>develop</code> deploy run <code>22515394690</code> and promoted via reconciled PR #98.</li>
+          <li><strong>Privacy-surface hardening expanded:</strong> API <code>Permissions-Policy</code> now explicitly disables <code>browsing-topics</code> (<code>browsing-topics=()</code>), verified on <code>develop</code> deploy run <code>22515461579</code> and promoted via reconciled PR #101.</li>
         </ul>
       </section>
 
