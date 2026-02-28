@@ -2,9 +2,9 @@
   {
     "slug": "riannahs-plants",
     "name": "riannah's plants",
-    "status": "in-progress",
-    "updated": "2026-02-27",
-    "summary": "Closed-beta plant manager with auth/RBAC, admin user provisioning API+dashboard UI, plant CRUD, and watering/repotting due-task tracking on Cloudflare.",
+    "status": "live",
+    "updated": "2026-02-28",
+    "summary": "V1 is live on Cloudflare with closed-beta auth/RBAC, admin user provisioning, plant CRUD, watering+repot schedules/events, and verified dev/prod deployment flow.",
     "links": {
       "overview": "/projects/riannahs-plants/",
       "plan": "/projects/riannahs-plants/plan.html",
