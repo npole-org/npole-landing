@@ -1,7 +1,7 @@
 [
   {
     "slug": "riannahs-plants",
-    "name": "riannah's plants",
+    "name": "riannah's garden",
     "status": "live",
     "updated": "2026-02-28",
     "summary": "V1 is live on Cloudflare with closed-beta auth/RBAC, admin user provisioning, plant CRUD, watering+repot schedules/events, plus post-v1 security hardening (auth validation + API response security headers) shipping continuously on develop.",
